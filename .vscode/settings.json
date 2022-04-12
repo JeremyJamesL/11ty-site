@@ -1,0 +1,9 @@
+{
+    "emmet.preferences": {
+    
+    },
+
+    "emmet.includeLanguages": {
+        "nunjucks": "html"
+      }
+}
