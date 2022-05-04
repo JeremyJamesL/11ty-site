@@ -5,4 +5,11 @@ layout: base-layout.njk
   <h1 class="blog-title">{{ title }}</h1> 
   <time class="time" datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time> 
   {{ content | safe }}
+  {# <p>Tagged in:
+  {% for tag in tags -%}
+    {% if tag !== 'posts' %}
+        <a class="tag" href="/tags/{{ tag }}">{{ tag }}</a>
+    {% endif %}
+{%- endfor %}
+</p> #}
 </article>

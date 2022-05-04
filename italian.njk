@@ -1,0 +1,18 @@
+---
+layout: base-layout.njk
+pagination:
+  data: collections.italian
+  size: 10
+  reverse: true
+  alias: posts
+---
+{% for post in posts %}
+  <article>
+    <h1 class="blog-title">
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h1>
+    <time class="time" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+    {% excerpt post %}
+    <a href="{{ post.url | url }}" class="continue">Continue reading <span>→</span> </a>
+  </article>
+{% endfor %}
